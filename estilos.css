@@ -1,0 +1,1509 @@
+@charset "UTF-8";
+
+/* Para poder usar los diferentes iconos  y definir el tipo de letra del flexslider*/
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ras medium itc';
+  src: url('fonts/ErasMediumITC.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/* Se define el borde y se indica la fuente de la letra a usar */
+* {
+  box-sizing: border-box;
+  font-family: ras medium itc;
+}
+
+/* Definimos el ancla para la navegación interna */
+.ancla {
+  padding-top: 150px;
+}
+
+
+:root {
+  --zero-bg-color: #d3dbd;
+  --one-bg-color: #16a2da;
+  --two-bg-color: white;
+  --three-bg-color: #1a7096;
+  --four-bg-color: #0e4f6c;
+  --five-bg-color: #06324f;
+  --six-bg-color: #847c81;
+  --seven-bg-color: #333233;
+  --eight-bg-color: #5b5b5c;
+  --nine-bg-color: #040404;
+}
+
+.bg-primary {
+  background-color: var(--three-bg-color);
+}
+
+
+
+
+/*---------------------------------- Parte para el header -----------------------------------*/
+
+/* Se define el header y sus características principales */
+header {
+  background-color: var(--two-bg-color);
+  width: 100%;
+  height: 13vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+/* Se define la navegación y sus características principales */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--two-bg-color);
+
+}
+
+/* Se define la clase donde va a estar el logo */
+.brand_top {
+  margin-top: 5px;
+}
+
+/* Se definen las características principales de la imagen del logo */
+.brand_top img {
+  margin-top: 5px;
+  margin-left: 0%;
+  margin-bottom: 0;
+  width: 200px;
+  height: 80px;
+}
+
+/* Se definen las caracteristicas de la lista para esa clase topnav */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Se definen las caracteristicas del elemento de la lista para esa clase topnav */
+.menu li {
+  padding: 0 10px;
+
+}
+
+/* Se definen las caracteristicas de los links de la lista para esa clase topnav */
+.menu a {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 10px;
+  margin-top: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+  border-radius: 0.5em;
+  line-height: 80px;
+  position: relative;
+}
+
+/* Se definen las caracteristicas para el cambio de color on hover */
+.menu a:hover {
+  background-color: var(--three-bg-color);
+  color: var(--two-bg-color);
+  text-decoration: none;
+}
+
+/* Se define el open menu para pantallas pequeñas */
+.open-menu {
+  color: #175a9e;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  float: right;
+  line-height: 80px;
+
+  display: none;
+  /* No se muestra por ahora*/
+}
+
+/* Se define el close menu para pantallas pequeñas */
+.close-menu {
+  color: #175a9e;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  float: right;
+  line-height: 80px;
+
+  display: none;
+  /* No se muestra por ahora*/
+}
+
+
+
+
+
+/*---------------------------------- Parte para el Body -----------------------------------*/
+
+/* Se definen las caracteristicas para el body*/
+body {
+  margin: 0;
+  font-family: ras medium itc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Se definen las caracteristicas para los titulos, subtitulos y parrafos generales*/
+h1 {
+  color: var(--five-bg-color);
+  text-align: center;
+}
+
+h2 {
+  color: var(--five-bg-color);
+  text-align: center;
+  font-weight: bold;
+
+}
+
+h3 {
+  color: #01335c;
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  color: var(--five-bg-color);
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--nine-bg-color);
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--five-bg-color);
+}
+
+
+
+
+/*---------------------------------- Parte para los contenedores -----------------------------------*/
+
+
+/* Primer contenedor */
+.content {
+  padding-top: 90px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: justify;
+  background-color: transparent;
+}
+
+.content img {
+  width: 80%;
+  max-width: 400px;
+}
+
+.content img.mapa_navegacion {
+  width: 95%;
+  margin: auto;
+  max-width: 800px;
+}
+
+.content p {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+  flex-direction: column;
+  text-align: justify;
+}
+
+
+.content h2 {
+  margin: auto;
+}
+
+/* Contenedor - imagen para titulos------------------------------*/
+
+.container-titulo {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.container-titulo img{
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  opacity: 0.3;
+  
+}
+
+/* Centered text */
+.first-txt{
+  position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  color: var(--five-bg-color);
+  font-size: calc(2.5em + 2.5vw);
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.img_nosotros{
+  width:100% ; 
+  height:20vh;
+  object-fit: cover;
+}
+
+/* Primer contenedor - Slider------------------------------*/
+
+#container-slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 100px;
+}
+
+#slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 0;
+}
+
+#slider li {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: -1;
+  opacity: 0;
+}
+
+#container-slider .arrowPrev,
+#container-slider .arrowNext {
+  font-size: 30pt;
+  color: rgba(204, 204, 204, 0.65);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  z-index: 2;
+}
+
+#container-slider .arrowNext {
+  left: initial;
+  right: 50px !important;
+}
+
+.content_slider {
+  padding: 15px 30px;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+}
+
+.content_slider a:link{
+  color: white;
+}
+.content_slider a:hover{
+  color: white;
+}
+.content_slider div {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.content_slider h2 {
+  font-size: 30pt;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.content_slider p {
+  font-size: 15pt;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+#slider li .content_slider {
+  margin-bottom: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 125px;
+}
+
+.content_slider {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSlider {
+  color: #FFF;
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 10px 50px;
+  border: none;
+  background: var(--three-bg-color);
+  border-radius: 31px;
+  text-decoration: none;
+  transition: .5s all;
+}
+
+.btnSlider:hover {
+  background: var(--one-bg-color);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.listslider {
+  position: absolute;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 48.5%;
+  bottom: 5%;
+  list-style: none;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.listslider li {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.listslider li a {
+  background: #CCC;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.item-select-slid {
+  background: #FFF !important;
+}
+
+/*---------------------------------- Cards -----------------------------------*/
+
+.card{
+  text-align: center;
+  margin: 2%;
+}
+.card img{
+  height:40vh;
+  object-fit: cover;
+  
+}
+
+.card p{
+  color: var(--two-bg-color);
+}
+
+
+.card-img-overlay h5{
+font-size:1.2em;
+font-weight: bold;
+text-transform: uppercase;
+}
+.card-img-overlay p{
+  font-size:1.2em;
+  }
+
+/*---------------------------------- Parte para Whatsapp -----------------------------------*/
+
+.whatsapp {
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  z-index: 12;
+}
+
+.whatsapp img {
+  width: 60px;
+  height: 60px;
+}
+
+/*---------------------------------- Parte para Instagram -----------------------------------*/
+
+
+.instagram {
+  position: fixed;
+  right: 8%;
+  bottom: 4.5%;
+  z-index: 12;
+}
+
+.instagram img {
+  width: 67px;
+  height: 67px;
+}
+
+
+
+
+
+/*---------------------------------- Parte para el Footer -----------------------------------*/
+/* Style the footer */
+.footer {
+  padding: 0;
+  margin:0 ;
+}
+
+.pl {
+  color: var(--two-bg-color);
+  text-align: left;
+}
+.pr {
+  color: var(--two-bg-color);
+  text-align: right;
+}
+
+.footer a {
+  color: var(--two-bg-color);
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* Para visualizar en tablet*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (min-width:800px) and (max-width:1200px) {
+
+
+
+
+  header {
+    background-color: white;
+    width: 100%;
+    height: 102px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  /* Se define la navegación y sus características principales */
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 2px #1f6191;
+
+  }
+
+  /* Se define la clase donde va a estar el logo */
+  .brand_top {
+    margin-top: 5px;
+  }
+
+  /* Se definen las características principales de la imagen del logo */
+  .brand_top img {
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-bottom: 0;
+    width: 200px;
+    height: 80px;
+  }
+
+  /* Se definen las caracteristicas de la lista para esa clase topnav */
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: #1f6191;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+
+
+  }
+
+  /* Se definen las caracteristicas del elemento de la lista para esa clase topnav */
+  .menu li {
+    padding-top: 0px;
+
+  }
+
+  /* Se definen las caracteristicas de los links de la lista para esa clase topnav */
+  .menu a {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px 80px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 0.5em;
+    line-height: 80px;
+  }
+
+  /* Se definen las caracteristicas para el cambio de color on hover */
+  .menu a:hover {
+    background-color: #c5c5c5;
+    color: #0c6099;
+  }
+
+  .open-menu {
+    color: #0c6099;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    float: right;
+    line-height: 80px;
+
+    display: none;
+  }
+
+  .close-menu {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 35px;
+    padding: 0 20px;
+    float: right;
+    line-height: 80px;
+
+    display: none;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding: 2px 38px;
+  }
+
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /*---------------------------------- Parte para el Slider -----------------------------------*/
+
+  .flexslider {
+    width: 80%;
+    position: relative;
+    z-index: 0;
+    margin-left: 10%;
+
+  }
+
+
+
+  /*---------------------------------- Parte para el Body -----------------------------------*/
+
+  /* Se definen las caracteristicas para el body*/
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(imagenes/fondo.png);
+  }
+
+  /* Se definen las caracteristicas para los titulos, subtitulos y parrafos generales*/
+  h1 {
+    color: #01335c
+  }
+
+  h2 {
+    color: #01335c
+  }
+
+  h3 {
+    color: #01335c;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    color: #01335c;
+    text-align: center;
+  }
+
+  .p1 {
+    color: #01335c;
+    font-weight: bold;
+
+
+  }
+
+
+
+  /*---------------------------------- Parte para los contenedores -----------------------------------*/
+
+
+  /* Primer contenedor */
+  .content {
+    padding-top: 100px;
+    background-color: transparent;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+  .content p {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .content h2 {
+    margin: auto;
+  }
+
+  /* Segundo contenedor */
+
+  .container_personal {
+    padding-top: 100px;
+    background-color: white;
+    overflow: auto;
+    width: 90%;
+    padding-top: 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  .personal {
+    float: left;
+    width: 30%;
+    height: 320px;
+    background-color: white;
+    min-width: 300px;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .personal img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .personal2 {
+    float: right;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    min-width: 300px;
+    text-align: center;
+    overflow: hidden;
+
+  }
+
+  .personal2 p {
+    font-size: 20px;
+  }
+
+
+
+  /* Tercer contenedor */
+  .container_tratamiento {
+    padding-top: 100px;
+    background-color: white;
+    width: 95%;
+    margin-left: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .container_tratamiento ul {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .container_tratamiento ul li {
+
+    width: 300px;
+    height: 200px;
+    background-color: #ddedf6;
+    margin: 40px 30px;
+    box-sizing: border-box;
+    border: 2px solid #767b81;
+    display: inline-block;
+  }
+
+  .container_tratamiento ul li .title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #3072a1;
+    text-align: center;
+    color: white;
+
+  }
+
+
+  .container_historia {
+    position: fixed;
+    margin-top: 105px;
+    background-color: white;
+    width: 70%;
+    height: 25px;
+    margin-left: 15%;
+    display: none;
+    pointer-events: none;
+  }
+
+
+  .nav_historia {
+    background-color: #1f6191;
+    width: 100%;
+    height: 25px;
+    margin: auto;
+
+  }
+
+
+  /* Se definen las caracteristicas de la lista para esa clase topnav */
+  .nav_historia ul {
+    margin-top: 0px;
+  }
+
+  /* Se definen las caracteristicas del elemento de la lista para esa clase topnav */
+  .nav_historia ul li {
+    display: inline-block;
+    margin-left: 10px;
+
+  }
+
+  /* Se definen las caracteristicas de los links de la lista para esa clase topnav */
+  .nav_historia ul li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 1px 10px;
+    margin-top: 0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Se definen las caracteristicas para el cambio de color on hover */
+  .nav_historia ul li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /*---------------------------------- Parte para el Footer -----------------------------------*/
+  /* Style the footer */
+  .footer {
+    background-color: #0C65B6;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 0;
+  }
+
+  .footer ul {
+    display: inline-block;
+    text-decoration: none;
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 5%;
+  }
+
+  .footer ul li {
+    color: white;
+    padding-left: 0px;
+    font-size: 0.8em;
+    list-style: none;
+  }
+
+  .footer ul li a {
+    color: white;
+  }
+
+
+  /*---------------------------------- Parte para Whatsapp -----------------------------------*/
+
+  .whatsapp {
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+  }
+
+  .whatsapp img {
+    width: 45px;
+    height: 45px;
+  }
+
+.instagram {
+  position: fixed;
+  right: 10%;
+  bottom: 4.5%;
+  z-index: 12;
+}
+
+.instagram img {
+  width: 50px;
+  height: 50px;
+}
+}
+
+/*
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* Para visualizar en celular*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+
+  #container-slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  #slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 0;
+  }
+  
+  #slider li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+  #container-slider .arrowPrev,
+  #container-slider .arrowNext {
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 2;
+  }
+  
+  #container-slider .arrowNext {
+    left: initial;
+    right: 20px !important;
+  }
+  
+  .content_slider {
+    padding: 15px 30px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content_slider a:link{
+    color: white;
+  }
+  .content_slider a:hover{
+    color: white;
+  }
+  .content_slider div {
+    margin-top: 0px;
+    text-align: center;
+  }
+  
+  .content_slider h2 {
+    font-size: 30pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .content_slider p {
+    font-size: 15pt;
+    color: #FFF;
+    margin-bottom: 20px;
+  }
+  
+  #slider li .content_slider {
+    margin-bottom: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 125px;
+  }
+  
+  .content_slider {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btnSlider {
+    color: #FFF;
+    font-size: 15pt;
+    font-weight: bold;
+    padding: 10px 50px;
+    border: none;
+    background: var(--three-bg-color);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .5s all;
+  }
+  
+  .btnSlider:hover {
+    background: var(--one-bg-color);
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+  
+  .listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 48.5%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+  
+  .listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .listslider li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .item-select-slid {
+    background: #FFF !important;
+  }
+  
+
+
+
+
+  header {
+    background-color: white;
+    width: 100%;
+    height: 102px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  /* Se define la navegación y sus características principales */
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 2px #1f6191;
+
+  }
+
+  /* Se define la clase donde va a estar el logo */
+  .brand_top {
+    margin-top: 5px;
+  }
+
+  /* Se definen las características principales de la imagen del logo */
+  .brand_top img {
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-bottom: 0;
+    width: 150px;
+    height: 60px;
+  }
+
+  /* Se definen las caracteristicas de la lista para esa clase topnav */
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: #1f6191;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+
+
+  }
+
+  /* Se definen las caracteristicas del elemento de la lista para esa clase topnav */
+  .menu li {
+    padding-top: 0px;
+
+  }
+
+  /* Se definen las caracteristicas de los links de la lista para esa clase topnav */
+  .menu a {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px 80px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 0.5em;
+    line-height: 80px;
+  }
+
+  /* Se definen las caracteristicas para el cambio de color on hover */
+  .menu a:hover {
+    background-color: #c5c5c5;
+    color: #0c6099;
+  }
+
+  .open-menu {
+    color: #0c6099;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    float: right;
+    line-height: 80px;
+
+    display: none;
+  }
+
+  .close-menu {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 35px;
+    padding: 0 20px;
+    float: right;
+    line-height: 80px;
+
+    display: none;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding: 2px 38px;
+  }
+
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /*---------------------------------- Parte para el Slider -----------------------------------*/
+
+  .flexslider {
+    width: 98%;
+    position: relative;
+    z-index: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+
+  }
+
+
+
+  /*---------------------------------- Parte para el Body -----------------------------------*/
+
+  /* Se definen las caracteristicas para el body*/
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(imagenes/fondo.png);
+  }
+
+  /* Se definen las caracteristicas para los titulos, subtitulos y parrafos generales*/
+  h1 {
+    color: #01335c
+  }
+
+  h2 {
+    color: #01335c
+  }
+
+  h3 {
+    color: #01335c;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    color: #01335c;
+    text-align: center;
+  }
+
+  .p1 {
+    color: #01335c;
+    font-weight: bold;
+
+
+  }
+
+
+
+  /*---------------------------------- Parte para los contenedores -----------------------------------*/
+
+
+  /* Primer contenedor */
+  .content {
+    padding-top: 100px;
+    background-color: transparent;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+  .content p {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .content h2 {
+    margin: auto;
+  }
+
+  /* Segundo contenedor */
+
+  .container_personal {
+    padding-top: 100px;
+    background-color: white;
+    overflow: auto;
+    width: 90%;
+    padding-top: 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  .personal {
+    float: left;
+    width: 30%;
+    height: 320px;
+    background-color: white;
+    min-width: 300px;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .personal img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .personal2 {
+    float: right;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    min-width: 300px;
+    text-align: center;
+    overflow: hidden;
+
+  }
+
+  .personal2 p {
+    font-size: 20px;
+  }
+
+
+
+  /* Tercer contenedor */
+  .container_tratamiento {
+    padding-top: 100px;
+    background-color: white;
+    width: 95%;
+    margin-left: 2.5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .container_tratamiento ul {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .container_tratamiento ul li {
+
+    width: 300px;
+    height: 200px;
+    background-color: #ddedf6;
+    margin: 40px 30px;
+    box-sizing: border-box;
+    border: 2px solid #767b81;
+    display: inline-block;
+  }
+
+  .container_tratamiento ul li .title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #3072a1;
+    text-align: center;
+    color: white;
+
+  }
+
+
+  .container_historia {
+    position: fixed;
+    margin-top: 105px;
+    background-color: white;
+    width: 70%;
+    height: 25px;
+    margin-left: 15%;
+    display: none;
+    pointer-events: none;
+  }
+
+
+  .nav_historia {
+    background-color: #1f6191;
+    width: 100%;
+    height: 25px;
+    margin: auto;
+
+  }
+
+
+  /* Se definen las caracteristicas de la lista para esa clase topnav */
+  .nav_historia ul {
+    margin-top: 0px;
+  }
+
+  /* Se definen las caracteristicas del elemento de la lista para esa clase topnav */
+  .nav_historia ul li {
+    display: inline-block;
+    margin-left: 10px;
+
+  }
+
+  /* Se definen las caracteristicas de los links de la lista para esa clase topnav */
+  .nav_historia ul li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 1px 10px;
+    margin-top: 0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Se definen las caracteristicas para el cambio de color on hover */
+  .nav_historia ul li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /*---------------------------------- Parte para el Footer -----------------------------------*/
+  /* Style the footer */
+  .footer {
+    background-color: #0C65B6;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 0;
+  }
+
+  .footer ul {
+    display: inline-block;
+    text-decoration: none;
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 5%;
+  }
+
+  .footer ul li {
+    color: white;
+    padding-left: 0px;
+    font-size: 0.8em;
+    list-style: none;
+  }
+
+  .footer ul li a {
+    color: white;
+  }
+
+
+  /*---------------------------------- Parte para Whatsapp -----------------------------------*/
+
+  .whatsapp {
+    position: fixed;
+    right: 3%;
+    bottom: 9%;
+  }
+
+  .whatsapp img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .instagram {
+    position: fixed;
+    right: 2.5%;
+    bottom: 16%;
+    z-index: 12;
+  }
+  
+  .instagram img {
+    width: 50px;
+    height: 50px;
+  }
+
+}
